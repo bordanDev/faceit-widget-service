@@ -1,0 +1,69 @@
+.ui-level-progress {
+  min-width: 48px;
+  width: min-content;
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  container-type: inline-size;
+}
+
+.faceit-gauge {
+  width: 100%;
+  height: 100%;
+  transform: rotate(150deg); /* Ключевой момент: поворачиваем круг "разрывом" вниз */
+  overflow: visible; /* Чтобы тени или края штриха не обрезались */
+}
+
+/* Общие стили для кругов */
+.circle-bg,
+.circle-progress {
+  fill: none;
+  stroke-width: 8;
+  //   stroke-linecap: round; /* Скругленные края линий */
+
+  /* Математика:
+      R = 40. Длина окружности (C) = 2 * PI * 40 ≈ 251.2
+      Мы хотим дугу в 240 градусов (это 2/3 круга).
+      Длина дуги = 251.2 * (240/360) ≈ 167.5
+      Остаток (пустота) = 251.2 - 167.5 = 83.7
+      
+      stroke-dasharray: ДЛИНА_ШТРИХА  ДЛИНА_ПРОБЕЛА
+    */
+  stroke-dasharray: 167.5 251.2;
+}
+
+.circle-bg {
+  stroke: #2f2f2f; /* Цвет трека */
+}
+
+.circle-progress {
+  stroke: url(#gradient); /* Цвет прогресса */
+
+  /* Анимация "заполнения" */
+  /* stroke-dashoffset сдвигает штрих. 
+       Начало (пусто): offset = 167.5 (вся длина штриха спрятана)
+       Конец (полный): offset = 0
+    */
+  stroke-dashoffset: 167.5;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+/* Текст по центру. 
+     Т.к. SVG повернут, текст лучше выводить отдельным блоком поверх SVG */
+.gauge-info {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+}
+
+.level-num {
+  font-size: 28cqw;
+  font-weight: 800;
+  line-height: 1;
+}

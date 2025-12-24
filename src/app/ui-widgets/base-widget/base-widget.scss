@@ -1,0 +1,23 @@
+.ui-base-widget {
+  max-width: 400px;
+  display: flex;
+  width: 100%;
+  background-color: #131313;
+  color: rgb(237, 237, 237);
+  border-radius: 12px;
+  padding: 24px;
+  align-items: center;
+  height: fit-content;
+
+  img {
+    display: flex;
+    border-radius: 100%;
+    max-width: 48px;
+    aspect-ratio: 1;
+  }
+
+  &--nickname {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}

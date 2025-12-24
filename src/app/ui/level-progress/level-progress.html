@@ -1,0 +1,24 @@
+<svg class="faceit-gauge" viewBox="0 0 100 100">
+  <!-- <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color: #ff5500; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #ff9900; stop-opacity: 1" />
+    </linearGradient>
+  </defs> -->
+
+  <circle class="circle-bg" cx="50" cy="50" r="40" />
+
+  <circle
+    class="circle-progress"
+    id="progress-circle"
+    cx="50"
+    cy="50"
+    r="40"
+    [style.stroke-dashoffset]="getLoaderValue()"
+    [style.stroke]="getColorStateByLevel()"
+  />
+</svg>
+
+<div class="gauge-info">
+  <div class="level-num" [style.color]="getColorStateByLevel()">{{ level() }}</div>
+</div>

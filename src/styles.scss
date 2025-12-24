@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+@font-face {
+  font-family: 'Play'; /* A name you choose to use in your CSS */
+  src: url('../public/fonts/Play-Bold.ttf') format('ttf');
+  src: url('../public/fonts/Play-Regular.ttf') format('ttf');
+}
+body,
+*,
+html {
+  font-family: Play;
+}
