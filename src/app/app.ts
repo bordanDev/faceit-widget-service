@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { DataService } from './api/data.service';
 import { UiWidgetModule } from './ui-widgets/ui-widget.module';
 import { UiModule } from './ui/ui.module';
 
@@ -11,6 +12,10 @@ import { UiModule } from './ui/ui.module';
 })
 export class App {
   protected readonly title = signal('faceit-pro-widget');
+  private dataService = inject(DataService);
+  protected setPlayer(e: any): void {
+    this.dataService.setValue(e);
+  }
 }
 
 // 1. Детали конкретной игры (внутри объекта games)

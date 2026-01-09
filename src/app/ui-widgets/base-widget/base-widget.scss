@@ -13,11 +13,18 @@
     display: flex;
     border-radius: 100%;
     max-width: 48px;
+    margin-right: 12px;
     aspect-ratio: 1;
   }
 
   &--nickname {
     font-weight: 700;
     font-size: 24px;
+    flex: 1;
+  }
+
+  &--elo {
+    margin: 0 12px;
+    font-weight: bold;
   }
 }
