@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  height: 100vh;
+
+  .ui-left-panel {
+    width: 100%;
+    max-width: 20vw;
+    padding: 12px;
+  }
+  .ui-main-content {
+    width: 100%;
+    padding: 12px;
+    background-color: #e3e3e3;
+    color: #000000;
+  }
+  .ui-right-panel {
+    width: 100%;
+    max-width: 20vw;
+    padding: 12px;
+  }
+}

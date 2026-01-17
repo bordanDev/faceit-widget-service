@@ -14,6 +14,7 @@
 
 html {
   color: white;
+  background-color: #090909;
 }
 
 body,
@@ -21,4 +22,8 @@ body,
 html {
   font-family: 'Play';
   font-weight: normal;
+}
+
+body {
+  margin: unset;
 }

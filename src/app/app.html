@@ -1,2 +1,11 @@
-<ui-search (uiValueChanged)="setPlayer($event)"></ui-search>
-<ui-base-widget />
+<ui-layout [mainContent]="mainContent" [leftPanel]="leftPanel" [rightPanel]="rightPanel" />
+
+<ng-template #mainContent>
+  <ui-base-widget />
+</ng-template>
+
+<ng-template #leftPanel>
+  <ui-search (uiValueChanged)="setPlayer($event)"></ui-search>
+</ng-template>
+
+<ng-template #rightPanel> right panel </ng-template>

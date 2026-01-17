@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { DataService } from './api/data.service';
+import { Layout } from './layout/layout';
 import { UiWidgetModule } from './ui-widgets/ui-widget.module';
 import { UiModule } from './ui/ui.module';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, UiModule, UiWidgetModule],
+  imports: [CommonModule, UiModule, UiWidgetModule, Layout],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
