@@ -1,0 +1,26 @@
+{
+  "singleQuote": false,
+  "tabWidth": 2,
+  "endOfLine": "auto",
+  "bracketSameLine": true,
+  "singleAttributePerLine": true,
+  "printWidth": 100,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "trailingComma": "none",
+  "htmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": "**/*.html",
+      "options": {
+        "printWidth": 120
+      }
+    },
+    {
+      "files": "**/*.yaml",
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}
