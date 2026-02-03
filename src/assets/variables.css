@@ -1,5 +1,6 @@
 /* Auto-generated from faceit-tokens.json */
 :root {
+
   /* --- Brand Primitives --- */
   --color-faceit-orange-100: #ffe2cc;
   --color-faceit-orange-200: #ffc599;
@@ -21,28 +22,37 @@
   --color-neutral-950: #0a0c0c;
   --color-success-500: #28a745;
   --color-danger-500: #dc3545;
+  --color-neutral-450: #bdc0c4;
+  --color-neutral-600: #5f6b6b;
 }
-body.dark {
-  --background-default: #141616;
-  --background-surface: #232828;
-  --background-surface-hover: #323838;
-  --background-primary: #ff5500;
-  --background-primary-hover: #e14a00;
-  --text-primary: #ffffff;
-  --text-secondary: #d7dbdf;
-  --text-brand: #ff5500;
-  --border-default: #323838;
-  --border-active: #ff5500;
-}
-body.light {
-  --background-default: #f5f8fa;
-  --background-surface: #ffffff;
-  --background-primary: #ff5500;
-  --text-primary: #0a0c0c;
-  --text-secondary: #323838;
-  --text-brand: #e14a00;
-  --border-default: #e1e5e9;
-  --background-surface-hover: #ebeff3;
-  --background-primary-hover: #ff7d33;
-  --border-active: #ff7d33;
-}
+ body.dark {
+ --background-default: #141616;
+ --background-surface: #232828;
+ --background-surface-hover: #323838;
+ --background-primary: #ff5500;
+ --background-primary-hover: #e14a00;
+ --text-primary: #ffffff;
+ --text-secondary: #d7dbdf;
+ --text-brand: #ff5500;
+ --border-default: #323838;
+ --border-active: #ff5500;
+ --border-default-invert: #e1e5e9;
+ --text-disabled: #5f6b6b;
+ --background-disabled: #232828;
+ 
+ } body.light {
+ --background-default: #f5f8fa;
+ --background-surface: #ffffff;
+ --background-primary: #ff5500;
+ --text-primary: #0a0c0c;
+ --text-secondary: #323838;
+ --text-brand: #e14a00;
+ --border-default: #e1e5e9;
+ --background-surface-hover: #ebeff3;
+ --background-primary-hover: #ff7d33;
+ --border-active: #ff7d33;
+ --border-default-invert: #323838;
+ --text-disabled: #5f6b6b;
+ --background-disabled: #ffffff;
+ 
+ }

@@ -9,9 +9,11 @@ import { ButtonType } from "../../types";
   styleUrl: "./button.scss",
   encapsulation: ViewEncapsulation.None,
   host: {
-    class: "ui-button"
+    class: "ui-button",
+    "[attr.disabled]": "isDisabled() ? true : null"
   }
 })
 export class UiButton {
   public type: InputSignal<UtlOptional<ButtonType>> = input<UtlOptional<ButtonType>>(null);
+  public isDisabled: InputSignal<boolean> = input<boolean>(false);
 }
