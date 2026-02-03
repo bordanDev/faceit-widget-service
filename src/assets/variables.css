@@ -39,6 +39,7 @@
  --border-default-invert: #e1e5e9;
  --text-disabled: #5f6b6b;
  --background-disabled: #232828;
+ --text-placeholder: #323838;
  
  } body.light {
  --background-default: #f5f8fa;
@@ -54,5 +55,6 @@
  --border-default-invert: #323838;
  --text-disabled: #5f6b6b;
  --background-disabled: #ffffff;
+ --text-placeholder: #d7dbdf;
  
  }

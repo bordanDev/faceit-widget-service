@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
-import { Component, inject, signal } from "@angular/core";
-import { DataService } from "./api/data.service";
+import { Component, signal } from "@angular/core";
+import { FeaturesModule } from "./features";
 import { Layout } from "./layout/layout";
 import { ThemeService } from "./theme/theme.service";
 import { UiWidgetModule } from "./ui-widgets/ui-widget.module";
@@ -8,20 +8,15 @@ import { UiModule } from "./ui/ui.module";
 
 @Component({
   selector: "app-root",
-  imports: [CommonModule, UiModule, UiWidgetModule, Layout],
+  imports: [CommonModule, UiModule, UiWidgetModule, Layout, FeaturesModule],
   templateUrl: "./app.html",
   styleUrl: "./app.scss"
 })
 export class App {
   protected readonly title = signal("faceit-pro-widget");
-  private dataService = inject(DataService);
 
   constructor(private themeService: ThemeService) {
     this.themeService.init();
-  }
-
-  protected setPlayer(e: any): void {
-    this.dataService.setValue(e);
   }
 }
 
