@@ -6,6 +6,7 @@
     "start": "ng serve --port",
     "build": "ng build --configuration production",
     "start-build": "http-server dist/faceit-widget/browser -p 8000 --cors",
+    "figma-token-build": "node src/assets/build-tokens.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

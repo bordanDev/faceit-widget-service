@@ -1,0 +1,48 @@
+/* Auto-generated from faceit-tokens.json */
+:root {
+  /* --- Brand Primitives --- */
+  --color-faceit-orange-100: #ffe2cc;
+  --color-faceit-orange-200: #ffc599;
+  --color-faceit-orange-300: #ffa866;
+  --color-faceit-orange-400: #ff7d33;
+  --color-faceit-orange-500: #ff5500;
+  --color-faceit-orange-600: #e14a00;
+  --color-faceit-orange-700: #b33b00;
+  --color-faceit-orange-800: #802a00;
+  --color-faceit-orange-900: #4d1900;
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f5f8fa;
+  --color-neutral-100: #ebeff3;
+  --color-neutral-200: #e1e5e9;
+  --color-neutral-300: #d7dbdf;
+  --color-neutral-700: #323838;
+  --color-neutral-800: #232828;
+  --color-neutral-900: #141616;
+  --color-neutral-950: #0a0c0c;
+  --color-success-500: #28a745;
+  --color-danger-500: #dc3545;
+}
+body.dark {
+  --background-default: #141616;
+  --background-surface: #232828;
+  --background-surface-hover: #323838;
+  --background-primary: #ff5500;
+  --background-primary-hover: #e14a00;
+  --text-primary: #ffffff;
+  --text-secondary: #d7dbdf;
+  --text-brand: #ff5500;
+  --border-default: #323838;
+  --border-active: #ff5500;
+}
+body.light {
+  --background-default: #f5f8fa;
+  --background-surface: #ffffff;
+  --background-primary: #ff5500;
+  --text-primary: #0a0c0c;
+  --text-secondary: #323838;
+  --text-brand: #e14a00;
+  --border-default: #e1e5e9;
+  --background-surface-hover: #ebeff3;
+  --background-primary-hover: #ff7d33;
+  --border-active: #ff7d33;
+}

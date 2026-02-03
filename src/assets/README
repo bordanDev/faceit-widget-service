@@ -1,0 +1,2 @@
+Use "Figma Variables to JSON" figma plugin to generate JSON file like "tokens.json".
+Launch build-tokens.js and take new bunch of css variables inside project.
