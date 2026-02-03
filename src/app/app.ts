@@ -1,27 +1,27 @@
-import { CommonModule } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
-import { DataService } from './api/data.service';
-import { Layout } from './layout/layout';
-import { ThemeService } from './theme/theme.service';
-import { UiWidgetModule } from './ui-widgets/ui-widget.module';
-import { UiModule } from './ui/ui.module';
+import { CommonModule } from "@angular/common";
+import { Component, inject, signal } from "@angular/core";
+import { DataService } from "./api/data.service";
+import { Layout } from "./layout/layout";
+import { ThemeService } from "./theme/theme.service";
+import { UiWidgetModule } from "./ui-widgets/ui-widget.module";
+import { UiModule } from "./ui/ui.module";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   imports: [CommonModule, UiModule, UiWidgetModule, Layout],
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  templateUrl: "./app.html",
+  styleUrl: "./app.scss"
 })
 export class App {
-  protected readonly title = signal('faceit-pro-widget');
+  protected readonly title = signal("faceit-pro-widget");
   private dataService = inject(DataService);
-  protected setPlayer(e: any): void {
-    this.dataService.setValue(e);
-  }
 
   constructor(private themeService: ThemeService) {
-    console.log(themeService.getNativeTheme());
-    console.log(themeService.get());
+    this.themeService.init();
+  }
+
+  protected setPlayer(e: any): void {
+    this.dataService.setValue(e);
   }
 }
 

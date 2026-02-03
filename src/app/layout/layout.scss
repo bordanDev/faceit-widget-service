@@ -6,16 +6,18 @@
     width: 100%;
     max-width: 20vw;
     padding: 12px;
+    background-color: var(--background-default);
   }
   .ui-main-content {
     width: 100%;
     padding: 12px;
-    background-color: #e3e3e3;
+    background-color: var(--background-surface);
     color: #000000;
   }
   .ui-right-panel {
     width: 100%;
     max-width: 20vw;
     padding: 12px;
+    background-color: var(--background-default);
   }
 }

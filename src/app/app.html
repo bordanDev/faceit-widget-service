@@ -1,11 +1,18 @@
-<ui-layout [mainContent]="mainContent" [leftPanel]="leftPanel" [rightPanel]="rightPanel" />
+<ui-layout
+  [mainContent]="mainContent"
+  [leftPanel]="leftPanel"
+  [rightPanel]="rightPanel" />
+
+<ng-template #leftPanel>
+  <div class="menu">
+    <ui-search (uiValueChanged)="setPlayer($event)"></ui-search>
+    <span ui-text>Faceit Pro Widget 2026 ©</span>
+    <button ui-button>test</button>
+  </div>
+</ng-template>
 
 <ng-template #mainContent>
   <ui-base-widget />
 </ng-template>
 
-<ng-template #leftPanel>
-  <ui-search (uiValueChanged)="setPlayer($event)"></ui-search>
-</ng-template>
-
-<ng-template #rightPanel> right panel </ng-template>
+<ng-template #rightPanel></ng-template>
