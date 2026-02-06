@@ -1,4 +1,6 @@
 <input
   type="text"
   [attr.placeholder]="'Search'"
-  [value]="value()" />
+  [value]="value()"
+  (input)="onChange($event.target.value)"
+  (blur)="onTouched()" />

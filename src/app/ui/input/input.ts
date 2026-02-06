@@ -1,11 +1,6 @@
-import { Component, forwardRef, signal, ViewEncapsulation, WritableSignal } from "@angular/core";
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
+import { Component, signal, ViewEncapsulation, WritableSignal } from "@angular/core";
+import { ControlValueAccessor, NgControl } from "@angular/forms";
 
-export const CUSTOM_CONTROL_VALUE_ACCESSOR: any = {
-  provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => UiInput),
-  multi: true
-};
 @Component({
   selector: "ui-input",
   imports: [],
@@ -15,15 +10,19 @@ export const CUSTOM_CONTROL_VALUE_ACCESSOR: any = {
   host: {
     class: "ui-input",
     "[attr.disabled]": "isDisabled()"
-  },
-  providers: CUSTOM_CONTROL_VALUE_ACCESSOR
+  }
 })
 export class UiInput implements ControlValueAccessor {
   // TODO: Type implementation for value accessor
 
   public readonly value: WritableSignal<any> = signal(null);
-
   public isDisabled: WritableSignal<boolean> = signal(false);
+
+  constructor(private ngControl: NgControl) {
+    if (this.ngControl) {
+      this.ngControl.valueAccessor = this;
+    }
+  }
 
   public writeValue(value: any): void {
     this.value.set(value);
@@ -40,6 +39,6 @@ export class UiInput implements ControlValueAccessor {
     this.isDisabled.set(isDisabled);
   }
 
-  protected onChange?(value: any): () => void;
-  protected onTouched?(): () => void;
+  protected onChange(value: any) {}
+  protected onTouched() {}
 }

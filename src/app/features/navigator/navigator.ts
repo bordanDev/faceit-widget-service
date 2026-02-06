@@ -1,15 +1,22 @@
 import { Component, inject } from "@angular/core";
+import { FormControl, ReactiveFormsModule, ɵInternalFormsSharedModule } from "@angular/forms";
+import { debounceTime } from "rxjs";
 import { DataService } from "../../api/data.service";
 import { UiModule } from "../../ui";
 
 @Component({
   selector: "ui-navigator",
-  imports: [UiModule],
+  imports: [UiModule, ɵInternalFormsSharedModule, ReactiveFormsModule],
   templateUrl: "./navigator.html",
   styleUrl: "./navigator.scss"
 })
 export class Navigator {
+  protected search = new FormControl<string>("");
   private dataService = inject(DataService);
+
+  constructor() {
+    this.search.valueChanges.pipe(debounceTime(500)).subscribe((x) => this.setPlayer(x));
+  }
 
   protected setPlayer(e: any): void {
     this.dataService.setValue(e);
