@@ -2,11 +2,12 @@ import { Component, computed, effect, inject, signal, ViewEncapsulation } from "
 import { ApiService } from "../../api/api.service";
 import { DataService } from "../../api/data.service";
 import { FaceitPlayerProfile } from "../../app";
+import { Avatar } from "../../ui/avatar";
 import { UiLevelProgress } from "../../ui/level-progress";
 
 @Component({
   selector: "ui-base-widget",
-  imports: [UiLevelProgress],
+  imports: [UiLevelProgress, Avatar],
   templateUrl: "./base-widget.html",
   styleUrl: "./base-widget.scss",
   encapsulation: ViewEncapsulation.None,

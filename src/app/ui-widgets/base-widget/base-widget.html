@@ -1,4 +1,6 @@
-<img [src]="image()" />
+<ui-avatar
+  [type]="image() ? 'photo' : 'icon'"
+  [value]="image()" />
 <span class="ui-base-widget--nickname">{{ nickName() }}</span>
 <span class="ui-base-widget--elo">{{ elo() }}</span>
 <ui-level-progress [level]="level()"></ui-level-progress>

@@ -11,10 +11,11 @@ import { UiModule } from "../../ui";
   styleUrl: "./navigator.scss"
 })
 export class Navigator {
-  protected search = new FormControl<string>("");
+  protected search = new FormControl<string>("ptzhno");
   private dataService = inject(DataService);
 
   constructor() {
+    this.setPlayer(this.search.value);
     this.search.valueChanges.pipe(debounceTime(500)).subscribe((x) => this.setPlayer(x));
   }
 

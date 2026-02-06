@@ -40,6 +40,8 @@
  --text-disabled: #5f6b6b;
  --background-disabled: #232828;
  --text-placeholder: #323838;
+ --background-default-invert: #ffffff;
+ --text-primary-invert: #0a0c0c;
  
  } body.light {
  --background-default: #f5f8fa;
@@ -56,5 +58,7 @@
  --text-disabled: #5f6b6b;
  --background-disabled: #ffffff;
  --text-placeholder: #d7dbdf;
+ --background-default-invert: #141616;
+ --text-primary-invert: #ffffff;
  
  }

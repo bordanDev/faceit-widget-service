@@ -1,0 +1,18 @@
+.ui-avatar {
+  display: flex;
+  border-radius: 100%;
+  background-color: var(--background-default-invert);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  max-width: 64px;
+  width: 100%;
+  position: relative;
+  ui-icon {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
