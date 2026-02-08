@@ -1,5 +1,7 @@
 <div class="navigator-top">
-  <ui-input [formControl]="search"></ui-input>
+  <ui-input
+    class="navigator-search"
+    [formControl]="search"></ui-input>
 
   <ui-button-group>
     <button ui-button>Templates</button>
@@ -9,6 +11,14 @@
       Builder
     </button>
   </ui-button-group>
+
+  <div class="entity-list">
+    @for (item of templatesMock; track $index) {
+    <ui-entity-box>
+      <img [src]="item" />
+    </ui-entity-box>
+    }
+  </div>
 </div>
 
 <span ui-text>Faceit Pro Widget 2026 ©</span>

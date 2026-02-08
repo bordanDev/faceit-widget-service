@@ -12,6 +12,11 @@ import { UiModule } from "../../ui";
 })
 export class Navigator {
   protected search = new FormControl<string>("ptzhno");
+  protected templatesMock = [
+    "assets/template-list/base-widget.png",
+    "assets/template-list/base-widget-1.png"
+  ];
+
   private dataService = inject(DataService);
 
   constructor() {
