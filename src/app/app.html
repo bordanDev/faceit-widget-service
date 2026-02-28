@@ -8,7 +8,12 @@
 </ng-template>
 
 <ng-template #mainContent>
-  <ui-base-widget />
+  <ui-wrapper
+    cdkDrag
+    cdkDragHandle
+    cdkDragBoundary=".ui-main-content">
+    <ui-base-widget />
+  </ui-wrapper>
 </ng-template>
 
 <ng-template #rightPanel></ng-template>

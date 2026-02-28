@@ -1,6 +1,8 @@
+import { CdkDrag, CdkDragHandle } from "@angular/cdk/drag-drop";
 import { CommonModule } from "@angular/common";
 import { Component, signal } from "@angular/core";
 import { FeaturesModule } from "./features";
+import { DragAndDropService } from "./features/services";
 import { Layout } from "./layout/layout";
 import { ThemeService } from "./theme/theme.service";
 import { UiWidgetModule } from "./ui-widgets/ui-widget.module";
@@ -8,14 +10,17 @@ import { UiModule } from "./ui/ui.module";
 
 @Component({
   selector: "app-root",
-  imports: [CommonModule, UiModule, UiWidgetModule, Layout, FeaturesModule],
+  imports: [CommonModule, UiModule, UiWidgetModule, Layout, FeaturesModule, CdkDrag, CdkDragHandle],
   templateUrl: "./app.html",
   styleUrl: "./app.scss"
 })
 export class App {
   protected readonly title = signal("faceit-pro-widget");
 
-  constructor(private themeService: ThemeService) {
+  constructor(
+    private themeService: ThemeService,
+    protected dragService: DragAndDropService
+  ) {
     this.themeService.init();
   }
 }

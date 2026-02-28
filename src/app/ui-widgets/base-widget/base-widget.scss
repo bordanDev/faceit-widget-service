@@ -1,13 +1,25 @@
 .ui-base-widget {
-  max-width: 400px;
+  // max-width: 400px;
+  // display: flex;
+  // width: 100%;
+  // background-color: var(--background-default);
+  // color: var(--text-primary);
+  // border-radius: 12px;
+  // padding: 24px;
+  // align-items: center;
+  // height: fit-content;
+  // // transition: 0.1s;\
   display: flex;
-  width: 100%;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  max-width: 610px;
+
   background-color: var(--background-default);
   color: var(--text-primary);
   border-radius: 12px;
   padding: 24px;
-  align-items: center;
-  height: fit-content;
+  box-sizing: border-box;
 
   ui-avatar {
     margin-right: 8px;
